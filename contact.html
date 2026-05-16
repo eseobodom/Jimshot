@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Jimshot Media House | Contact</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<nav>
+  <div class="logo" onclick="window.location.href='index.html'">
+    <img src="jim.png" alt="Jim'shot Logo">
+    <span>JIMSHOT</span>
+  </div>
+  <div class="menu-icon" id="menuIcon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+<div class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="contact-main">
+  
+  <div class="contact-section">
+    
+    <div class="contact-header fade">
+      <h2>Let's Talk</h2>
+      <div class="divider"></div>
+      <p>Ready to build a brand that speaks? Send us a message and let's create something meaningful.</p>
+    </div>
+    
+    <div class="contact-grid">
+      
+      <div class="form-container fade">
+        <form id="contactForm" action="https://formspree.io/f/mqenrjzq" method="POST">
+          
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" name="name" required placeholder="Your name">
+          </div>
+          
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" name="email" required placeholder="your@email.com">
+          </div>
+          
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="+234 800 000 0000">
+          </div>
+          
+          <div class="form-group">
+            <label>Service Interested In *</label>
+            <select name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="Photography">Photography</option>
+              <option value="Videography">Videography</option>
+              <option value="Brand Strategy">Brand Strategy</option>
+              <option value="Content Creation">Content Creation</option>
+              <option value="Visual Storytelling">Visual Storytelling</option>
+              <option value="Other">Other / Not sure yet</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Message *</label>
+            <textarea name="message" required placeholder="Tell us about your project, vision, or what you need help with..."></textarea>
+          </div>
+          
+          <input type="text" name="_gotcha" style="display:none">
+          
+          <button type="submit" class="submit-btn">Send Message →</button>
+        </form>
+      </div>
+      
+      <div class="info-container fade">
+        <h3>Connect With Us</h3>
+        
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-text">
+            <h4>Location</h4>
+            <p>Akwa Ibom, Nigeria</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">📧</div>
+          <div class="info-text">
+            <h4>Email</h4>
+            <a href="mailto:jimshot001@gmail.com ">jimshot001@gmail.com</a>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div class="info-text">
+            <h4>Phone</h4>
+            <a href="tel:09115341551">+234 911 534 1551</a>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">⏰</div>
+          <div class="info-text">
+            <h4>Hours</h4>
+            <p>Sun - Sat: 24hrs</p>
+          </div>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://www.instagram.com/official_jimshot?igsh=bzl3cmF5MXpidGlj" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1DhZDv2LiS/" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="back-home">
+      <a href="index.html">← Back to Home</a>
+    </div>
+    
+  </div>
+</div>
+
+<div id="notificationToast" class="notification-modal">
+  <span class="notification-icon">✨</span>
+  <span class="notification-message" id="toastMessage">Success</span>
+</div>
+
+<script src="contact.js"></script>
+
+</body>
+</html>

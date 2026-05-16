@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Jimshot media house</title>
+<link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="description" content="Jimshot Media House - Visual storytelling, graphic design, photography and videography">
+<meta name="author" content="Jimshot Media House">
+</head>
+
+<body>
+
+<div class="loader" id="loader"><div class="spinner"></div></div>
+<canvas id="bg"></canvas>
+
+<nav>
+  <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+  <img src="jim.png" alt="Jim'shot Logo" style="height: 70px; width: auto; border-radius: 20px;">
+  <span>JIMSHOT</span>
+</div>
+  <div class="menu-icon" id="menuIcon">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+<div class="menu" id="menu">
+  <a href="#">Home</a>
+  <a href="service.html">Services</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="hero" id="intro">
+  <div class="hero-card fade">
+    <h1>Welcome to JIMSHOT</h1>
+    <h3>Let's create something meaningful...</h3>
+    <p>Check out our latest design models</p>
+    <button class="continue-btn">Continue</button>
+  </div>
+</section>
+
+
+<div id="mainContent" class="hidden-content">
+  <div class="upload-section">
+    <div class="upload fade" id="uploadBox">
+      <label for="file">✨ Upload Design ✨</label>
+      <input type="file" id="file" accept="image/*">
+    </div>
+  </div>
+  
+  <div class="info-section fade" id="infoSection">
+    <div class="info-card">
+      <h2>✨ JIMSHOT Media House</h2>
+      <div class="info-divider"></div>
+      <p>Welcome to <span class="highlight">Jimshot</span><br> A space where visuals are created with intention <br>We specialize in graphic design, photography and videography<br> We don't just create designs or take photos, we build visuals that communicate <br><br>Your brand needs clarity, direction, and meaning <br>Every project is approached with one goal: to create work that speaks, connects and delivers results<br><br>If you're ready to build a brand that is not just seen but understood, you're in the right place</p><br>
+      <div class="feature-list">
+        <div class="feature-item"><span>📸</span>Photography</div>
+        <div class="feature-item"><span>🎨</span> Graphic Design</div>
+        <div class="feature-item"><span>🎥</span> Videography</div>
+      </div>
+      <p style="font-size:0.85rem; margin-top:16px; opacity:0.7;">Jimshot media house</p>
+    </div>
+  </div><br><br>
+  
+  <div class="gallery-header">
+    <div class="gallery-title">
+      <h3><span>✦</span> Designs <span>✦</span></h3>
+      <div class="design-count" id="designCount">0 pieces</div>
+    </div>
+    <div id="emptyStateMsg" class="empty-state fade" style="display: none;">
+      <div class="empty-state-icon">🎨</div>
+      <p>No designs available at the moment</p>
+      <small>Check back soon for fresh inspiration ✨</small>
+    </div>
+  </div>
+  
+  <div class="posts" id="posts"></div>
+<div class="home-services-section fade" style="max-width: 900px; margin: 60px auto 0; padding: 0 20px;">
+  
+  <div class="home-services-header" style="text-align: center; margin-bottom: 40px;">
+    <h2 style="color: gold; font-size: 1.8rem; letter-spacing: -0.5px;">What We Do</h2>
+    <div style="width: 60px; height: 2px; background: gold; margin: 15px auto;"></div>
+    <p style="color: #ccc; font-size: 1rem;">Visual solutions that speak, connect and deliver results</p>
+  </div>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+    
+    <div class="service-card-hp" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,215,0,0.2); border-radius: 20px; padding: 25px; text-align: center; transition: 0.3s; cursor: pointer;">
+      <div style="font-size: 2rem; margin-bottom: 15px;">📸</div>
+      <h3 style="color: gold; font-size: 1.3rem; margin-bottom: 10px;">Photography</h3>
+      <p style="color: #bbb; font-size: 0.9rem; line-height: 1.5;">Commercial, portrait and product photography that captures emotion</p>
+    </div>
+    
+    <div class="service-card-hp" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,215,0,0.2); border-radius: 20px; padding: 25px; text-align: center; transition: 0.3s; cursor: pointer;">
+      <div style="font-size: 2rem; margin-bottom: 15px;">🎨</div>
+      <h3 style="color: gold; font-size: 1.3rem; margin-bottom: 10px;">Graphic Design</h3>
+      <p style="color: #bbb; font-size: 0.9rem; line-height: 1.5;">Logos, brand identity and visual systems that are bold and clear</p>
+    </div>
+    
+    <div class="service-card-hp" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,215,0,0.2); border-radius: 20px; padding: 25px; text-align: center; transition: 0.3s; cursor: pointer;">
+      <div style="font-size: 2rem; margin-bottom: 15px;">🎥</div>
+      <h3 style="color: gold; font-size: 1.3rem; margin-bottom: 10px;">Videography</h3>
+      <p style="color: #bbb; font-size: 0.9rem; line-height: 1.5;">Short films, promos and social content that grabs attention</p>
+    </div>
+    
+  </div>
+  
+  <div style="text-align: center; margin-top: 40px;">
+    <button onclick="window.location.href='service.html'" class="home-service-btn" style="background: gold; color: black; border: none; padding: 12px 32px; border-radius: 10px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: 0.3s;">View All Services →</button>
+  </div>
+  
+</div>
+
+<div class="home-contact-section fade" style="max-width: 900px; margin: 60px auto 0; padding: 0 20px;">
+  
+  <div class="home-contact-header" style="text-align: center; margin-bottom: 40px;">
+    <h2 style="color: gold; font-size: 1.8rem; letter-spacing: -0.5px;">Let's Work Together</h2>
+    <div style="width: 60px; height: 2px; background: gold; margin: 15px auto;"></div>
+    <p style="color: #ccc; font-size: 1rem;">Ready to build a brand that speaks? Let's create something meaningful</p>
+  </div>
+  
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+    
+    <div>
+      <p style="color: #ddd; line-height: 1.6; margin-bottom: 20px;">Whether you have a project in mind or just want to explore ideas, we're here to help. Every brand has a story, let us help you tell yours</p>
+      <div style="display: flex; gap: 15px; margin-top: 20px;">
+        <div>
+          <div style="color: gold; font-weight: bold;">📧 Email:</div>
+          <a href="mailto:jimshot001@gmail.com" style="color: #bbb; text-decoration: none;">jimshot001@gmail.com</a>
+        </div>
+        <div>
+          <div style="color: gold; font-weight: bold;">📞 Phone No:</div>
+          <p style="color: #bbb; window.location.href: 'tel: 09115341551">+2349115341551</p>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+      <button onclick="window.location.href='contact.html'" class="home-contact-btn" style="background: gold; color: black; border: none; padding: 14px 40px; border-radius: 10px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: 0.3s; width: 100%; max-width: 250px;">Contact Us →</button>
+    </div>
+    
+  </div>
+  
+</div>
+</div>
+
+<div class="custom-modal" id="customModal">
+  <div class="modal-box">
+    <h2 id="modalTitle">Admin Access</h2>
+    <input type="password" id="pinInput" placeholder="Enter PIN">
+    <div class="modal-buttons">
+      <button id="cancelBtn">Cancel</button>
+      <button id="confirmBtn">Confirm</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="delete-modal" id="deleteModal">
+  <div class="delete-modal-box">
+    <h3>⚠️ Delete Design</h3>
+    <p>Are you sure you want to delete this design? This action cannot be undone.</p>
+    <div class="delete-modal-buttons">
+      <button class="cancel-del-btn" id="cancelDeleteBtn">Cancel</button>
+      <button class="confirm-del-btn" id="confirmDeleteBtn">Delete</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="notificationToast" class="notification-modal">
+  <span class="notification-icon">✨</span>
+  <span class="notification-message" id="toastMessage">Success</span>
+</div>
+
+
+<div id="loadingOverlay" class="loading-overlay">
+  <div class="loading-spinner"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
